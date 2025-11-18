@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { useAppDispatch, useAppSelector } from 'app/providers/store/hooks';
-import { increment, decrement, reset, selectCounterValue } from '../model';
+import { increment, decrement, reset, selectCounterValue } from 'features/counter/model';
 import { Button, Card } from 'shared/ui';
 import styles from './Counter.module.scss';
 

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Card } from 'shared/ui';
-import { User } from '../model';
+import { User } from 'entities/user/model';
 import styles from './UserCard.module.scss';
 
 interface UserCardProps {

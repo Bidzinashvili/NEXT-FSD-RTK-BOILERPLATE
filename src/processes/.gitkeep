@@ -1,10 +1,1 @@
-// Processes layer is for complex multi-step workflows
-// that span across multiple features and entities
-
-// Example: User onboarding process that involves:
-// - Authentication (feature)
-// - Profile setup (feature)
-// - User data (entity)
-// - Settings configuration (feature)
-
 export {};
