@@ -1,0 +1,22 @@
+.userCard {
+  max-width: 400px;
+
+  .name {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .email,
+  .phone,
+  .website {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .email {
+    color: #0070f3;
+  }
+}

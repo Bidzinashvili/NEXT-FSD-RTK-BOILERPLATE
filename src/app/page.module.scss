@@ -1,0 +1,61 @@
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #333;
+      }
+
+      p {
+        font-size: 18px;
+        color: #666;
+      }
+    }
+
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .section {
+        h2 {
+          font-size: 28px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: #333;
+        }
+      }
+
+      .userList {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px;
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #d32f2f;
+  padding: 40px;
+}

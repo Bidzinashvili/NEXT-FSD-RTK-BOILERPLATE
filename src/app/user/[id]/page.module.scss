@@ -1,0 +1,31 @@
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 24px 0;
+      color: #333;
+    }
+  }
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+}
+
+.loading {
+  color: #666;
+}
+
+.error {
+  color: #d32f2f;
+}

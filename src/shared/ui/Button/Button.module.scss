@@ -1,0 +1,40 @@
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: #0070f3;
+  color: white;
+
+  &:hover {
+    background-color: #0060df;
+  }
+}
+
+.secondary {
+  background-color: #eaeaea;
+  color: #333;
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
+}

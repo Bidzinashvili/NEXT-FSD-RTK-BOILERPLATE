@@ -1,0 +1,25 @@
+.counter {
+  text-align: center;
+  max-width: 400px;
+
+  .title {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .value {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0070f3;
+    margin: 20px 0;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+}
