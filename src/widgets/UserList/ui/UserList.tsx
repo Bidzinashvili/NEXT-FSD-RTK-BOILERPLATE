@@ -2,17 +2,18 @@
 
 import { FC } from 'react';
 import { useGetUsersQuery, UserCard } from 'entities/user';
+import { Loader, ErrorMessage } from 'shared/ui';
 import styles from './UserList.module.scss';
 
 export const UserList: FC = () => {
-  const { data: users, isLoading, error } = useGetUsersQuery();
+  const { data: users, isLoading, error, refetch } = useGetUsersQuery();
 
   if (isLoading) {
-    return <div className={styles.loading}>Loading users...</div>;
+    return <Loader />;
   }
 
   if (error) {
-    return <div className={styles.error}>Error loading users</div>;
+    return <ErrorMessage message="Failed to load users" retry={refetch} />;
   }
 
   return (

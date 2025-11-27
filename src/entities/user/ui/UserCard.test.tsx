@@ -13,7 +13,7 @@ describe('UserCard', () => {
 
   it('renders user information', () => {
     render(<UserCard user={mockUser} />);
-    
+
     expect(screen.getByText('John Doe')).toBeInTheDocument();
     expect(screen.getByText('john@example.com')).toBeInTheDocument();
     expect(screen.getByText('123-456-7890')).toBeInTheDocument();
@@ -30,14 +30,14 @@ describe('UserCard', () => {
     };
 
     render(<UserCard user={anotherUser} />);
-    
+
     expect(screen.getByText('Jane Smith')).toBeInTheDocument();
     expect(screen.getByText('jane@example.com')).toBeInTheDocument();
   });
 
   it('renders all required fields', () => {
     const { container } = render(<UserCard user={mockUser} />);
-    
+
     expect(container.textContent).toContain(mockUser.name);
     expect(container.textContent).toContain(mockUser.email);
     expect(container.textContent).toContain(mockUser.phone);

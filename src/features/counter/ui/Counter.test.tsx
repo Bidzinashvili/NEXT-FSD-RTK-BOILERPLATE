@@ -31,20 +31,20 @@ describe('Counter', () => {
   it('increments counter when + button is clicked', async () => {
     const user = userEvent.setup();
     renderWithStore(<Counter />);
-    
+
     const incrementButton = screen.getByRole('button', { name: '+' });
     await user.click(incrementButton);
-    
+
     expect(screen.getByText('1')).toBeInTheDocument();
   });
 
   it('decrements counter when - button is clicked', async () => {
     const user = userEvent.setup();
     renderWithStore(<Counter />);
-    
+
     const decrementButton = screen.getByRole('button', { name: '-' });
     await user.click(decrementButton);
-    
+
     expect(screen.getByText('-1')).toBeInTheDocument();
   });
 
@@ -53,24 +53,24 @@ describe('Counter', () => {
     const { store } = renderWithStore(<Counter />, {
       initialState: { counter: { value: 5 } },
     });
-    
+
     expect(screen.getByText('5')).toBeInTheDocument();
-    
+
     const resetButton = screen.getByRole('button', { name: /reset/i });
     await user.click(resetButton);
-    
+
     expect(screen.getByText('0')).toBeInTheDocument();
   });
 
   it('handles multiple increment clicks', async () => {
     const user = userEvent.setup();
     renderWithStore(<Counter />);
-    
+
     const incrementButton = screen.getByRole('button', { name: '+' });
     await user.click(incrementButton);
     await user.click(incrementButton);
     await user.click(incrementButton);
-    
+
     expect(screen.getByText('3')).toBeInTheDocument();
   });
 

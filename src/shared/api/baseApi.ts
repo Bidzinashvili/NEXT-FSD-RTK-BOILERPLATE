@@ -3,7 +3,7 @@ import { API_BASE_URL } from 'shared/config';
 
 export const baseApi = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ 
+  baseQuery: fetchBaseQuery({
     baseUrl: API_BASE_URL,
   }),
   tagTypes: ['User', 'Post'],

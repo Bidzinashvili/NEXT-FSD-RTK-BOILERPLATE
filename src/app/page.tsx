@@ -2,10 +2,11 @@
 
 import { Counter } from 'features/counter';
 import { useGetUsersQuery, UserCard } from 'entities/user';
+import { Loader, ErrorMessage, ErrorBoundary } from 'shared/ui';
 import styles from './page.module.scss';
 
 export default function Home() {
-  const { data: users, isLoading, error } = useGetUsersQuery();
+  const { data: users, isLoading, error, refetch } = useGetUsersQuery();
 
   return (
     <main className={styles.page}>
@@ -18,20 +19,24 @@ export default function Home() {
         <div className={styles.sections}>
           <section className={styles.section}>
             <h2>Counter Feature</h2>
-            <Counter />
+            <ErrorBoundary>
+              <Counter />
+            </ErrorBoundary>
           </section>
 
           <section className={styles.section}>
             <h2>Users Entity (RTK Query)</h2>
-            {isLoading && <div className={styles.loading}>Loading users...</div>}
-            {error && <div className={styles.error}>Error loading users</div>}
-            {users && (
-              <div className={styles.userList}>
-                {users.slice(0, 6).map((user) => (
-                  <UserCard key={user.id} user={user} />
-                ))}
-              </div>
-            )}
+            <ErrorBoundary>
+              {isLoading && <Loader />}
+              {error && <ErrorMessage message="Error loading users" retry={refetch} />}
+              {users && (
+                <div className={styles.userList}>
+                  {users.slice(0, 6).map((user) => (
+                    <UserCard key={user.id} user={user} />
+                  ))}
+                </div>
+              )}
+            </ErrorBoundary>
           </section>
         </div>
       </div>

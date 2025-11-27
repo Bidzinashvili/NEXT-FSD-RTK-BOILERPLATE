@@ -33,6 +33,9 @@ src/
 - **Redux Toolkit** - State management
 - **RTK Query** - Data fetching and caching
 - **SCSS Modules** - Component-scoped styling
+- **Jest & React Testing Library** - Testing
+- **ESLint & Prettier** - Code quality and formatting
+- **Zod** - Runtime validation
 - **Feature-Sliced Design** - Architecture methodology
 
 ## 📦 Installation
@@ -48,6 +51,23 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🧪 Testing
+
+```bash
+npm test                # Run tests
+npm run test:watch      # Watch mode
+npm run test:coverage   # Coverage report
+```
+
+## 📝 Code Quality
+
+```bash
+npm run lint            # Run ESLint
+npm run lint:fix        # Fix ESLint errors
+npm run format          # Format with Prettier
+npm run format:check    # Check formatting
+```
 
 ## 🏗️ Build
 
@@ -95,8 +115,11 @@ npm start
 - ✅ SCSS Modules for styling
 - ✅ Absolute imports configured
 - ✅ Feature-Sliced Design architecture
-- ✅ Example counter feature with Redux
-- ✅ Example user entity with RTK Query
+- ✅ Jest & React Testing Library setup
+- ✅ ESLint & Prettier configured
+- ✅ Error boundaries for error handling
+- ✅ Loading states with Loader & Skeleton components
+- ✅ Environment variable validation with Zod
 - ✅ Production-ready structure
 
 ## 📝 Example Usage
